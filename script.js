@@ -2,8 +2,7 @@ console.log('------------- # 5');
 function ask(question, yes, no) {
     if (confirm(question)) {
         yes();
-    }
-    else {
+    } else {
         no();
     }
 }
