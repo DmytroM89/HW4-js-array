@@ -1,7 +1,11 @@
 console.log('------------- # 5');
 function ask(question, yes, no) {
-    if (confirm(question)) yes()
-    else no();
+    if (confirm(question)) {
+        yes();
+    }
+    else {
+        no();
+    }
 }
 ask(
     "Вы согласны?",
@@ -21,7 +25,7 @@ let users = [
     {id: 2, name: "Petya", age: 30},
     {id: 3, name: "Jon", age: 5}
 ];
-console.log(users.filter((user, idx, arr) => user.age < 20));
+console.log(users.filter((user) => user.age < 20));
 
 console.log('------------- # 9');
 // Массив users есть выше, чтобы не повторять
@@ -64,7 +68,9 @@ console.log( arrT12 );
 console.log('------------- # 13');
 function sum(...args) {
     let calc = 0;
-    for (let arg of args) calc += arg;
+    for (let arg of args) {
+        calc += arg;
+    }
     return calc;
 }
 console.log(sum(1, 5, 4, 9, 2, 6, 50));
